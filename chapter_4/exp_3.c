@@ -3,10 +3,9 @@
 #include <signal.h>
 #include <unistd.h>
 
-// not sure why terminal print "signaled!" without aborting the program
-
 void handler(int signum) {
     write(1, "signaled!", 9);
+    exit(0);
 }
 
 int main(int argc, char** argv)
